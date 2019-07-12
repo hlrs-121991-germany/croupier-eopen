@@ -45,6 +45,9 @@ SPECIALEXIT = 11
 STOPPED = 12
 SUSPENDED = 13
 TIMEOUT = 14
+TASK_RUNNING = 15
+TASK_KILLED = 16
+TASK_FINISHED = 17
 
 JOBSTATESLIST = [
     "BOOT_FAIL",
@@ -62,6 +65,9 @@ JOBSTATESLIST = [
     "STOPPED",
     "SUSPENDED",
     "TIMEOUT",
+    "TASK_RUNNING",
+    "TASK_KILLED",
+    "TASK_FINISHED",
 ]
 
 JOBSTATESDICT = {
@@ -80,6 +86,9 @@ JOBSTATESDICT = {
     "STOPPED": 12,
     "SUSPENDED": 13,
     "TIMEOUT": 14,
+    "TASK_RUNNING": 15,
+    "TASK_KILLED": 16,
+    "TASK_FINISHED": 17,
 }
 
 _STATES_PRECEDENCE = [
@@ -97,7 +106,10 @@ _STATES_PRECEDENCE = [
     CONFIGURING,
     PENDING,
     COMPLETING,
-    COMPLETED
+    COMPLETED,
+    TASK_RUNNING,
+    TASK_KILLED,
+    TASK_FINISHED
 ]
 
 
@@ -139,6 +151,9 @@ class WorkloadManager(object):
         if workload_manager == "BASH":
             from bash import Bash
             return Bash()
+        if workload_manager == "SPARK":
+            from spark import Spark
+            return Spark()
         return None
 
     def submit_job(self,
@@ -237,6 +252,13 @@ class WorkloadManager(object):
             logger.error("Job submission '" + call + "' exited with code " +
                          str(exit_code) + ":\n" + output)
             return False
+
+        # Job is successfully submitted, get the framework ID info 
+        # to manage the jobs in future
+        # if (settings['type'] == 'SPARK'):
+            # Parse output to get the framework ID
+        #    framework_id = _parse_spark_output(output)
+            # Store framework_id in each executables
         return True
 
     def clean_job_aux_files(self,
@@ -293,12 +315,19 @@ class WorkloadManager(object):
         if not SshClient.check_ssh_client(ssh_client, logger):
             return False
 
-        call = self._build_job_cancellation_call(name,
-                                                 job_options,
+        if job_options['type'] == "SPARK":
+            call = self._build_job_cancellation_call(name, \
+                                                 ssh_client, \
+                                                 logger)
+        else:
+            call = self._build_job_cancellation_call(name, \
+                                                 job_options, \
                                                  logger)
         if call is None:
             return False
 
+        if not SshClient.check_ssh_client(ssh_client, logger):
+            return False
         return ssh_client.execute_shell_command(
             call,
             workdir=workdir)

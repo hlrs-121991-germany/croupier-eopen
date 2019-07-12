@@ -1,0 +1,73 @@
+########
+# Copyright (c) 2019 HLRS. All rights reserved.
+#
+# This file is part of Croupier.
+#
+# Croupier is free software: you can redistribute it and/or modify it
+# under the terms of the Apache License, Version 2.0 (the License) License.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT, IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+# OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+# See README file for full disclaimer information and LICENSE file for full
+# license information in the project root.
+#
+# @author: Dineshkumar RAJAGOPAL
+#          HLRS.
+#          e-mail: hpcdraja@hlrs.de
+#
+# blueprint_spark.yaml
+
+
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+    # to speed things up, it is possible downloading this file,
+    - http://raw.githubusercontent.com/ari-apc-lab/croupier/master/resources/types/cfy_types.yaml
+    # relative import of plugin.yaml that resides in the blueprint directory
+    - plugin.yaml
+    - inputs_def_spark.yaml
+
+node_templates:
+    hpda_wm:
+        type: croupier.nodes.WorkloadManager
+        properties:
+            config: { get_input: hpda_wm_config }
+            credentials: { get_input: hpda_wm_credentials }
+            job_prefix: { get_input: job_prefix }
+            base_dir: { get_input: hpc_base_dir }
+            monitor_period: 15
+            skip_cleanup: true
+            simulate: True  # COMMENT to test against a real HPC
+            workdir_prefix: "single_spark"
+
+    single_job:
+        type: croupier.nodes.Job
+        properties:
+            job_options:
+                type: 'SPARK'
+                application: 'target/scala-2.11/simple-project_2.11-1.0.jar'
+                total_executor_cores: 11
+                executor_memory: '2G'
+                driver_cores: 4
+                driver_memory: '2G'
+                class_name: 'SimpleApp'
+            deployment:
+                bootstrap: 'scripts/bootstrap_spark.sh'
+                revert: 'scripts/revert_spark.sh'
+                inputs:
+                    - 'single'
+            skip_cleanup: True
+        relationships:
+            - type: job_managed_by_wm
+              target: hpda_wm
+
+outputs:
+    single_job_name:
+        description: single job name in the HPDA
+        value: { get_attribute: [single_job, job_name] }

@@ -29,7 +29,7 @@ tosca_definitions_version: cloudify_dsl_1_3
 imports:
     - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/resources/types/cfy_types.yaml
     - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/plugin.yaml
-    - inputs_def_spark.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/croupier_plugin/tests/blueprints/blueprint_spark/inputs_def_spark.yaml
 
 node_templates:
     hpda_wm:
@@ -37,30 +37,24 @@ node_templates:
         properties:
             config: { get_input: hpda_wm_config }
             credentials: { get_input: hpda_wm_credentials }
-            job_prefix: { get_input: job_prefix }
+            job_prefix: { get_input: hpda_job_prefix }
             base_dir: { get_input: hpda_base_dir }
-            monitor_period: 15
-            skip_cleanup: true
-            simulate: True  # COMMENT to test against a real HPC
-            workdir_prefix: "single_spark"
+            monitor_period: { get_input: hpda_monitoring_period }
+            skip_cleanup: {get_input: hpda_skip_cleanup}
+            workdir_prefix: {get_input: hpda_workdir_prefix}
 
     single_job:
         type: croupier.nodes.Job
         properties:
             job_options:
                 type: 'SPARK'
-                application: 'target/scala-2.11/simple-project_2.11-1.0.jar'
-                total_executor_cores: '11'
-                executor_memory: '2G'
-                driver_cores: '4'
-                driver_memory: '2G'
-                class_name: 'SimpleApp'
-            deployment:
-                bootstrap: 'scripts/bootstrap_spark.sh'
-                revert: 'scripts/revert_spark.sh'
-                inputs:
-                    - 'single'
-            skip_cleanup: True
+                application: {get_input: job_app_name }
+                total_executor_cores: {get_input: job_executor_cores }
+                executor_memory: {get_input: job_executor_memory }
+                driver_cores: {get_input: job_driver_cores }
+                driver_memory: {get_input: job_driver_memory }
+                class_name: {get_input: job_class_name }
+            skip_cleanup: {get_input: job_skip_cleanup}
         relationships:
             - type: job_managed_by_wm
               target: hpda_wm

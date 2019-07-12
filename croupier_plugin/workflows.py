@@ -117,7 +117,7 @@ class JobGraphInstance(object):
             self.winstance.send_event('State changed to ' + self._status)
 
             self.completed = not self.parent_node.is_job or \
-                self._status == 'COMPLETED'
+                (self._status == 'COMPLETED')
 
             if self.completed:
                 self.publish()

@@ -1,11 +1,13 @@
+#!/bin/bash
+
 ########
-# Copyright (c) HLRS. All rights reserved.
-#
+# Copyright (c) 2019 Atos Spain SA. All rights reserved.
+# 
 # This file is part of Croupier.
-#
+# 
 # Croupier is free software: you can redistribute it and/or modify it
 # under the terms of the Apache License, Version 2.0 (the License) License.
-#
+# 
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT, IN NO EVENT SHALL THE
@@ -13,35 +15,14 @@
 # LIABILITY, WHETHER IN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
 # OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-#
+# 
 # See README file for full disclaimer information and LICENSE file for full
 # license information in the project root.
-#
-# @author: Dineshkumar RAJAGOPAL
-#          HLRS, University Of Stuttgart.
-#          e-mail: hpcdraja@hlrs.de
-#
-# inputs_def_spark.yaml
+# 
+# @author: Javier Carnero
+#          Atos Research & Innovation, Atos Spain S.A.
+#          e-mail: javier.carnero@atos.net
+# 
+# bootstrap_example.sh
 
-
-inputs:
-  ################### HPDA Infrastructre ##################
-  hpda_base_dir:
-    description: HPDA working directory
-    default: "/home/users/hpcdraja/SampleApp"
-
-  hpda_wm_config:
-    description: timezone and workload manager of the HPDA
-    default:
-      country_tz: Europe/Madrid
-      workload_manager: SPARK
-
-  hpda_wm_credentials:
-    description: HPDA credentials
-    host: ""
-    user: "hpcdraja"
-    private_key: "" 
-    login_shell: true
-
-  job_prefix:
-    default: "SA_HPDA_HLRS"
+touch deploy_$1.test

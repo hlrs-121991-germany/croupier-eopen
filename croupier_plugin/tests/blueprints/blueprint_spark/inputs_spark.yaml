@@ -1,0 +1,12 @@
+hpda_base_dir: "/home/users/hpcdraja/SampleApp"
+hpda_job_prefix: "SA_HPDA_DIN"
+hpda_monitoring_period: 5
+hpda_skip_cleanup: True
+hpda_workdir_prefix: "spark_cfy_din"
+job_app_name: '/home/users/hpcdraja/SampleApp/target/scala-2.11/simple-project_2.11-1.0.jar'
+job_executor_cores: 21
+job_executor_memory: '10G'
+job_driver_cores: 5
+job_driver_memory: '5G'
+job_class_name: "SimpleApp"
+job_skip_cleanup: True

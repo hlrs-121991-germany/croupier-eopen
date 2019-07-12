@@ -46,8 +46,8 @@ STOPPED = 12
 SUSPENDED = 13
 TIMEOUT = 14
 TASK_RUNNING = 15
-TASK_KILLED = 16
-TASK_FINISHED = 17
+TASK_FINISHED = 16
+TASK_KILLED = 17
 
 JOBSTATESLIST = [
     "BOOT_FAIL",
@@ -66,8 +66,8 @@ JOBSTATESLIST = [
     "SUSPENDED",
     "TIMEOUT",
     "TASK_RUNNING",
-    "TASK_KILLED",
     "TASK_FINISHED",
+    "TASK_KILLED",
 ]
 
 JOBSTATESDICT = {
@@ -87,8 +87,8 @@ JOBSTATESDICT = {
     "SUSPENDED": 13,
     "TIMEOUT": 14,
     "TASK_RUNNING": 15,
-    "TASK_KILLED": 16,
-    "TASK_FINISHED": 17,
+    "TASK_FINISHED": 16,
+    "TASK_KILLED": 17,
 }
 
 _STATES_PRECEDENCE = [
@@ -108,8 +108,8 @@ _STATES_PRECEDENCE = [
     COMPLETING,
     COMPLETED,
     TASK_RUNNING,
-    TASK_KILLED,
-    TASK_FINISHED
+    TASK_FINISHED,
+    TASK_KILLED
 ]
 
 
@@ -145,16 +145,17 @@ class WorkloadManager(object):
         if workload_manager == "SLURM":
             from slurm import Slurm
             return Slurm()
-        if workload_manager == "TORQUE":
+        elif workload_manager == "TORQUE":
             from torque import Torque
             return Torque()
-        if workload_manager == "BASH":
+        elif workload_manager == "BASH":
             from bash import Bash
             return Bash()
-        if workload_manager == "SPARK":
+        elif workload_manager == "SPARK":
             from spark import Spark
             return Spark()
-        return None
+        else:
+            return None
 
     def submit_job(self,
                    ssh_client,
@@ -243,17 +244,35 @@ class WorkloadManager(object):
 
         # submit the job
         call = response['call']
-        output, exit_code = ssh_client.execute_shell_command(
-            call,
-            env=context,
-            workdir=workdir,
-            wait_result=True)
+        if (settings['type'] == 'SPARK'):
+            exit_code = ssh_client.execute_shell_command(
+                call,
+                env=context,
+                workdir=workdir,
+                wait_result=False)
+            if exit_code is True:
+                exit_code = 0
+            logger.debug("Job execution with exit code : " + str(exit_code))
+            import time
+            time.sleep(30)
+        else:
+            output, exit_code = ssh_client.execute_shell_command(
+                call,
+                env=context,
+                workdir=workdir,
+                wait_result=True)
+        # if (job_settings['type'] == 'SPARK'):
+        #    output, exit_code = ssh_client.execute_shell_command(   \
+        #        call, env=context, workdir=workdir, wait_result=False)
+        # else:
+        #    output, exit_code = ssh_client.execute_shell_command(   \
+        #        call, env=context, workdir=workdir, wait_result=True)
         if exit_code != 0:
             logger.error("Job submission '" + call + "' exited with code " +
                          str(exit_code) + ":\n" + output)
             return False
 
-        # Job is successfully submitted, get the framework ID info 
+        # Job is successfully submitted, get the framework ID info
         # to manage the jobs in future
         # if (settings['type'] == 'SPARK'):
             # Parse output to get the framework ID
@@ -316,13 +335,11 @@ class WorkloadManager(object):
             return False
 
         if job_options['type'] == "SPARK":
-            call = self._build_job_cancellation_call(name, \
-                                                 ssh_client, \
-                                                 logger)
+            call = self._build_job_cancellation_call(name, ssh_client,
+                                                     logger)
         else:
-            call = self._build_job_cancellation_call(name, \
-                                                 job_options, \
-                                                 logger)
+            call = self._build_job_cancellation_call(name, job_options,
+                                                     logger)
         if call is None:
             return False
 

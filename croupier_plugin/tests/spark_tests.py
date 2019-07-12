@@ -1,4 +1,5 @@
-'''
+"""
+
 Copyright (c) 2019 HLRS. All rights reserved.
 
 This file is part of Croupier.
@@ -21,225 +22,202 @@ license information in the project root.
          High-Performance Computing Center. Stuttgart
          e-mail: hpcdraja@hlrs.de
 
-slurm_tests.py: Holds the Slurm unit tests
-'''
+spark_tests.py: Holds the Spark unit tests
+
+"""
 
 
 import logging
 import unittest
 import json
-import sys
+import os
 from inspect import currentframe, getframeinfo
 
 from croupier_plugin.workload_managers.workload_manager import WorkloadManager
+
 
 class TestSpark(unittest.TestCase):
     """ Holds Spark tests """
 
     def __init__(self, methodName='runTest'):
         super(TestSpark, self).__init__(methodName)
-        self.wm = WorkloadManager.factory("SPARK")
-        logging.basicConfig(filename='./spark_tests.log',level=logging.DEBUG)
+        logging.basicConfig(filename='./spark_tests.log',
+                            level=logging.DEBUG)
         self.logger = logging.getLogger('TestSpark')
+        self.wm = WorkloadManager.factory("SPARK")
 
-    def test_bad_type_name(self):
+    def test_build_container_script(self):
+        """ Container script is not supported in the SPARK """
+        frameinfo = getframeinfo(currentframe())
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        job_settings = {'application': 'cmd', 'type': 'SPARK'}
+        response = self.wm._build_container_script('test', job_settings,
+                                                   self.logger)
+        self.assertIsNone(response)
+
+    def test_bad_application_name(self):
         """ Bad name type """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call(42,           \
-                                          {'application': 'cmd',    \
-                                           'type': 'SPA'},          \
-                                          self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        job_settings = {'application': 'cmd', 'type': 'SPARK'}
+        app_name = 42  # app_name should be in string
+        response = self.wm._build_job_submission_call(app_name, job_settings,
+                                                      self.logger)
         self.assertIn('error', response)
 
-    def test_bad_type_settings(self):
+    def test_bad_job_settings(self):
         """ Bad type settings """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                                                      'bad type',   \
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        job_settings = 'bad type'  # Job setting type is Dictionary
+        response = self.wm._build_job_submission_call('test', job_settings,
                                                       self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
         self.assertIn('error', response)
 
-    def test_bad_settings_command_type(self):
-        """ Bad type settings """
-        frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                                                      'bad type',   \
+        # Empty job settings
+        response = self.wm._build_job_submission_call('test', {}, self.logger)
+        self.assertIn('error', response)
+
+        # Bad job type in the job_settings
+        job_settings = {'application': 'cmd', 'type': 'SPA'}
+        response = self.wm._build_job_submission_call('test', job_settings,
                                                       self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
         self.assertIn('error', response)
 
-    def test_empty_settings(self):
-        """ Empty job settings """
-        frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                                                      {},           \
+        # Previously Workload Manager type is SPARK, so you shoud not
+        # give 'type': 'SLURM' afterwards
+        job_settings = {'application': 'cmd', 'type': 'SLURM'}
+        response = self.wm._build_job_submission_call('test', job_settings,
                                                       self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
+        self.assertIn('error', response)
+        job_settings = {'application': 'cmd', 'type': 'spark'}
+        response = self.wm._build_job_submission_call('test', job_settings,
+                                                      self.logger)
         self.assertIn('error', response)
 
-    def test_only_type_settings(self):
-        """ Type only as job settings """
-        frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                                      {'application': 'cmd',        \
-                                       'type': 'BAD'},              \
-                                      self.logger)
-        self.assertIn('error', response)
-
-    def test_only_command_settings(self):
-        """ Command only as job settings. """
-        frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                                      {'application': 'cmd'},       \
-                                      self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
+        # Command only in the job settings
+        job_settings = {'application': 'cmd'}
+        response = self.wm._build_job_submission_call('test', job_settings,
+                                                      self.logger)
         self.assertIn('error', response)
 
     def test_basic_spark_call(self):
         """ Basic spark-submit command. """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                              {'type': 'SPARK',                     \
-                               'application':                       \
-                                 './simple-project_2.11-1.0.jar'},  \
-                              self.logger)
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        app_name = 'test'
+        job_settings = {'type': 'SPARK', 'application':
+                        './simple-project_2.11-1.0.jar'}
+        response = self.wm._build_job_submission_call(app_name, job_settings,
+                                                      self.logger)
         self.assertNotIn('error', response)
         self.assertIn('call', response)
 
         call = response['call']
-        out_req = 'spark-submit --name test ' +                     \
-                         ' --total-executor-cores 1' +              \
-                         ' --executor-memory 2G' +                  \
-                         ' --driver-cores 1' +                      \
-                         ' --driver-memory 2G ' +                   \
-                         ' ./simple-project_2.11-1.0.jar; &'
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
-        self.assertEqual(call.replace(" ", ""),                     \
-                         out_req.replace(" ", ""))
+        out_req = 'nohup sh spark-submit --name test ' +    \
+            ' --total-executor-cores 1' +                   \
+            ' --executor-memory 2G' +                       \
+            ' --driver-cores 1' +                           \
+            ' --driver-memory 2G ' +                        \
+            ' ./simple-project_2.11-1.0.jar &>./test.out &'
+        self.assertEqual(call.replace(" ", ""), out_req.replace(" ", ""))
 
-    def test_complete_spark_call(self):
-        """ Complete spark-submit command. """
+        # Complete spark-submit command
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        response = self.wm._build_job_submission_call('test',       \
-                              {'total_executor_cores': 20,          \
-                               'type': 'SPARK',                     \
-                               'executor_memory': '2G',             \
-                               'driver_memory': '2G',               \
-                               'driver_cores': 10,                  \
-                               'application':                       \
-                                  './simple-project_2.11-1.0.jar'   \
-                               },                                   \
-                              self.logger)
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        job_settings = {'type': 'SPARK', 'type': 'SPARK', 'application':
+                        './simple-project_2.11-1.0.jar',
+                        'executor_memory': '2G', 'driver_memory': '2G',
+                        'driver_cores': 10, 'total_executor_cores': 20}
+        response = self.wm._build_job_submission_call('test', job_settings,
+                                                      self.logger)
         self.assertNotIn('error', response)
         self.assertIn('call', response)
 
         call = response['call']
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
-        self.assertEqual(call, 'spark-submit --name test ' +        \
-                         ' --total-executor-cores 20' +             \
-                         ' --executor-memory 2G' +                  \
-                         ' --driver-cores 10' +                     \
-                         ' --driver-memory 2G' +                    \
-                         ' ./simple-project_2.11-1.0.jar; &')
+        out_req = 'nohup sh spark-submit ' +            \
+            ' --name test --total-executor-cores 20' +  \
+            ' --executor-memory 2G' +                   \
+            ' --driver-cores 10' +                      \
+            ' --driver-memory 2G' +                     \
+            ' ./simple-project_2.11-1.0.jar &>' +       \
+            ' ./test.out &'
+        self.assertEqual(call.replace(" ", ""), out_req.replace(" ", ""))
 
     def test_random_name(self):
         """ Random name formation. """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
         name = self.wm._get_random_name('base')
 
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
         self.assertEqual(11, len(name))
         self.assertEqual('base_', name[:5])
 
     def test_random_name_uniqueness(self):
         """ Random name uniqueness. """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
         names = []
         for _ in range(0, 50):
             names.append(self.wm._get_random_name('base'))
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
         self.assertEqual(len(names), len(set(names)))
 
     def test_parse_frameworks_states(self):
         """ Parse state from framework JSON details """
         frameinfo = getframeinfo(currentframe())
-        self.logger.debug("we started at {1} - {0}".format(         \
-                            frameinfo.lineno, frameinfo.function))
-        test_string = '{'                                           +\
-                        '"frameworks": ['                           +\
-                            '{"name": "Simple Application",'        +\
-                              '"tasks": ['                          +\
-                                  '{'                               +\
-                                    '"state": "TASK_RUNNING"'       +\
-                                  '}'                               +\
-                              ']'                                   +\
-                            '}'                                     +\
-                        '],'                                        +\
-                        '"completed_frameworks": ['                 +\
-                            '{"name": "Simple Application",'        +\
-                              '"tasks": ['                          +\
-                                  '{'                               +\
-                                    '"state": "TASK_FINISHED"'      +\
-                                  '}'                               +\
-                              ']'                                   +\
-                            '}'                                     +\
-                        ']'                                         +\
-                    '}'
-        json_output  = json.loads(test_string)
-        parsed = self.wm._parse_frameworks_states(                  \
-                            json_output,                            \
-                            "Simple Application",                   \
-                            self.logger)
-        self.assertDictEqual( parsed,                               \
-                {"Simple Application": "TASK_RUNNING"} )
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        json_input = {}
+        with open(os.path.join(os.path.dirname(__file__),
+                               'input_spark_pretty.json')) as json_file:
+            json_input = json.load(json_file)
 
-        json_output  = json.loads(test_string)
-        parsed = self.wm._parse_frameworks_states(                  \
-                            json_output,                            \
-                            "Simple",                               \
-                            self.logger)
-        self.assertDictEqual(parsed, {})
+        parsed = self.wm._parse_frameworks_states(json_input,
+                                                  "SA_HPDA_HLRS849j32",
+                                                  self.logger)
+        self.assertDictEqual(parsed, {"SA_HPDA_HLRS849j32": "RUNNING"})
 
-        test_string = '{}'
-        json_output  = json.loads(test_string)
-        parsed = self.wm._parse_frameworks_states(                  \
-                            json_output,                            \
-                            "Simple Application",                   \
-                            self.logger)
-        self.logger.debug("we ended at {1} - {0}".format(           \
-                            frameinfo.lineno, frameinfo.function))
-        self.assertDictEqual(parsed, {})
+        parsed = self.wm._parse_frameworks_states(json_input,
+                                                  "Simple",
+                                                  self.logger)
+        self.assertDictEqual(parsed, {"Simple": "FAILED"})
+
+        parsed = self.wm._parse_frameworks_states(json_input,
+                                                  "SA_HPDA_HLRS849j34",
+                                                  self.logger)
+        self.assertDictEqual(parsed, {'SA_HPDA_HLRS849j34': 'PENDING'})
+
+        json_input = {}
+        parsed = self.wm._parse_frameworks_states(json_input,
+                                                  "SA_HPDA_HLRS849j34",
+                                                  self.logger)
+        self.assertDictEqual(parsed, {'SA_HPDA_HLRS849j34': 'FAILED'})
+
+    def test_parse_running_frameworks(self):
+        """ Parse state from running framework JSON details """
+        frameinfo = getframeinfo(currentframe())
+        self.logger.warning("{1} : {0}".format(frameinfo.lineno,
+                                               frameinfo.function))
+        json_input = {}
+        with open(os.path.join(os.path.dirname(__file__),
+                               'input_spark_pretty.json')) as json_file:
+            json_input = json.load(json_file)
+        user = "hpcdraja"
+        out_fwk_id = "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0224"
+        job_name = "SA_HPDA_HLRS849j32"
+        parsed = self.wm._parse_running_frameworks(json_input["frameworks"],
+                                                   user, job_name, self.logger)
+        spark_cancel_fmt = "curl -X POST http://{1}:`cat /security/" +      \
+            "secrets/{1}.mesos`@localhost:5050/teardown -d 'frameworkId={0}'; "
+        spark_cancl = spark_cancel_fmt.format(out_fwk_id, user)
+        self.assertEqual(parsed.replace(" ", ""), spark_cancl.replace(" ", ""))
 
 
 if __name__ == '__main__':

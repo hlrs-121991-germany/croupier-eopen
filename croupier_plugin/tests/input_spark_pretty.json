@@ -1,0 +1,4564 @@
+{
+  "frameworks": [
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0224",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-cd017b9a-29dd-4873-af40-cd86d40662d1@192.168.0.31:33614",
+      "used_resources": {
+        "disk": 0,
+        "mem": 2432,
+        "gpus": 0,
+        "cpus": 11
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563356697.14146,
+      "unregistered_time": 0,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 2432,
+        "gpus": 0,
+        "cpus": 11
+      },
+      "tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0224",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S7",
+          "state": "TASK_RUNNING",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563356697.47828,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.15"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "completed_tasks": [],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0226",
+      "name": "SA_HPDA_HLRS849j34",
+      "pid": "scheduler-cd017b9a-29dd-4873-af40-cd86d40662d1@192.168.0.31:33614",
+      "used_resources": {
+        "disk": 0,
+        "mem": 2432,
+        "gpus": 0,
+        "cpus": 11
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563356697.14146,
+      "unregistered_time": 0,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 2432,
+        "gpus": 0,
+        "cpus": 11
+      },
+      "tasks": [],
+      "completed_tasks": [],
+      "offers": [],
+      "executors": []
+    }
+  ],
+  "completed_frameworks": [
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0174",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-ea15aa44-7468-4e17-b6c2-e34b157cacec@192.168.0.31:34939",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4049",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287179.91556,
+      "unregistered_time": 1563287486.69681,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0174",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S12",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287180.24424,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563287486.61987,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0175",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-c53c8769-23e9-48ad-bafa-d4bdaafe0730@192.168.0.31:38418",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4050",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287197.43091,
+      "unregistered_time": 1563287504.25023,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0175",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S12",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 3
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287197.78346,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563287503.89375,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        },
+        {
+          "id": "1",
+          "name": "SA_HPDA_HLRSvnrjf9 1",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0175",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S17",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 8
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287197.77862,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.27"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563287504.2199,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.27"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0176",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-80deceb0-95e7-42ad-88d0-d41992d65b48@192.168.0.31:36902",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4051",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287214.50618,
+      "unregistered_time": 1563287521.19131,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0176",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S13",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287214.83807,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563287521.15488,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0179",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-d0ba7dcc-1360-484e-9554-e345ebbdca4b@192.168.0.31:33593",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4054",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287269.70432,
+      "unregistered_time": 1563287523.60746,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0179",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S8",
+          "state": "TASK_KILLED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287270.0354,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_KILLED",
+              "timestamp": 1563287523.60718
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0178",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-76b290e8-a611-4e4f-8410-7d497167d2d9@192.168.0.31:35911",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4053",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287248.73228,
+      "unregistered_time": 1563287523.6195,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0178",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S5",
+          "state": "TASK_KILLED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287249.07645,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.21"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_KILLED",
+              "timestamp": 1563287523.61932
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0177",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-9186228c-83f7-4935-baee-43839ff5f000@192.168.0.31:37206",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4052",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563287231.31982,
+      "unregistered_time": 1563287523.63103,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0177",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S10",
+          "state": "TASK_KILLED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563287231.66392,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_KILLED",
+              "timestamp": 1563287523.63082
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0180",
+      "name": "SA_HPDA_HLRSvnrjf9",
+      "pid": "scheduler-44ceef6b-156b-40be-9038-212ce8c455d2@192.168.0.31:44768",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563288061.22209,
+      "unregistered_time": 1563288187.87705,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSvnrjf9 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0180",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S0",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563288061.54423,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563288187.85093,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0181",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-09e568d5-ebe6-4103-a055-15a38619bf89@192.168.0.31:40207",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289332.4064,
+      "unregistered_time": 1563289459.09357,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0181",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S10",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289332.7258,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563289459.017,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0182",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-4f3ec0b3-0704-487f-9232-a309511e06fa@192.168.0.31:38390",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289495.56758,
+      "unregistered_time": 1563289621.82773,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0182",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S15",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289495.9025,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563289621.80394,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0183",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-8b7e50bf-2db8-4365-871f-381329456763@192.168.0.31:45365",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289512.87988,
+      "unregistered_time": 1563289639.07478,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0183",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S15",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289513.18945,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563289638.98663,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0184",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-58f658b2-2373-4fc4-84be-3b8e65ace54e@192.168.0.31:38125",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289530.08499,
+      "unregistered_time": 1563289656.54281,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0184",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S6",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289530.40571,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.41"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563289656.51947,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.41"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0185",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-9cb91f0c-aebf-45af-add3-b419d53a5869@192.168.0.31:46134",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289846.78404,
+      "unregistered_time": 1563289973.23722,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0185",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S4",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289847.10334,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.22"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563289973.20073,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.22"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0186",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-cab52fb0-4799-48f2-96cc-52edeb41416c@192.168.0.31:33431",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563289943.03232,
+      "unregistered_time": 1563290069.85369,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0186",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S5",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563289943.36516,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.21"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290069.76967,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.21"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0187",
+      "name": "SA_HPDA_HLRSfz2yib",
+      "pid": "scheduler-a89d4d0e-095e-4fb3-af5c-7c9ad96ecf37@192.168.0.31:44024",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290323.45803,
+      "unregistered_time": 1563290450.38284,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSfz2yib 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0187",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S19",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290323.78125,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290450.2759,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0188",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-adc7612e-1b4d-4e2c-8e18-0732dab67cad@192.168.0.31:33788",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290610.36623,
+      "unregistered_time": 1563290737.17975,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0188",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S7",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290610.67766,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.15"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290737.07393,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.15"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0189",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-98d9f96e-8351-4d94-8966-fa1370d6f24a@192.168.0.31:34828",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290774.29262,
+      "unregistered_time": 1563290900.95485,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0189",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S13",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290774.6198,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290900.91821,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0190",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-fc1c1ce3-a326-4745-9675-80e1bfc7980e@192.168.0.31:36364",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290791.27394,
+      "unregistered_time": 1563290917.79293,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0190",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S12",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290791.59798,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290917.6989,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0191",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-05047c0c-21a6-44d9-b6d3-a569884460f9@192.168.0.31:46620",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4043",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290808.30534,
+      "unregistered_time": 1563290935.03224,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0191",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S31",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290808.63993,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.42"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290934.95106,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.42"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0192",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-ffaaff66-462b-4599-92af-91198f8773e3@192.168.0.31:34263",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4044",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290825.31099,
+      "unregistered_time": 1563290952.24145,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0192",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S18",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290825.62001,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.40"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290952.13308,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.40"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0193",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-aa905d85-058c-4c56-a479-d1255c5190eb@192.168.0.31:33853",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4045",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290842.57615,
+      "unregistered_time": 1563290968.91371,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0193",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S20",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290842.91776,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.5"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290968.90209,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.5"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0194",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-8ca5c0fb-3a9c-4cc1-8ed5-94731f5b6f02@192.168.0.31:39932",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4046",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290859.51639,
+      "unregistered_time": 1563290986.14447,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0194",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S20",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290859.84119,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.5"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563290986.05225,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.5"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0195",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-62c3142b-5049-4711-bf92-e2a1b8712f6f@192.168.0.31:34495",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4047",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290876.44738,
+      "unregistered_time": 1563291002.95021,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0195",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S15",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290876.78109,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291002.884,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0196",
+      "name": "SA_HPDA_HLRSogjc68",
+      "pid": "scheduler-9f2c7528-211a-4a55-abbb-ed19b0f2e5e3@192.168.0.31:34814",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290902.39817,
+      "unregistered_time": 1563291029.10146,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSogjc68 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0196",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S36",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290902.74078,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.10"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291029.04516,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.10"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0197",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-27e7e64a-22ca-411f-b6e6-ae2f937d174f@192.168.0.31:38293",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563290927.24115,
+      "unregistered_time": 1563291053.7527,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0197",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S15",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563290927.57166,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291053.65635,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.7"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0198",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-1bed91a9-7e0f-468f-ab16-5f3e5faa68b9@192.168.0.31:35079",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291093.56337,
+      "unregistered_time": 1563291220.29509,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0198",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S8",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291093.90358,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291220.18784,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0199",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-590ac480-b988-4a36-9715-5c1e1a57d3a5@192.168.0.31:33293",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291111.93662,
+      "unregistered_time": 1563291238.66564,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0199",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S17",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291112.2796,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.27"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291238.58783,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.27"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0200",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-f3aec175-d466-4a7b-befa-4c191cee8b81@192.168.0.31:37116",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4043",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291130.11272,
+      "unregistered_time": 1563291258.14392,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0200",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S3",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291130.5538,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.23"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291258.066,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.23"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0201",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-e07ccdc4-2d04-4885-8952-9bc5bcdfebe9@192.168.0.31:34601",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4044",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291147.21434,
+      "unregistered_time": 1563291274.01795,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0201",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S0",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291147.54104,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291273.93668,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0202",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-09db6ee8-477e-41d1-85c6-a6fa8c083006@192.168.0.31:42016",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4045",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291171.25858,
+      "unregistered_time": 1563291297.82131,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0202",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S0",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291171.5901,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291297.79302,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0203",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-a46fb5d8-f8a4-48b7-bd5c-74eb7bddcf83@192.168.0.31:34196",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4046",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291188.21401,
+      "unregistered_time": 1563291315.18037,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0203",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S19",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291188.54741,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291315.16168,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0204",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-9db0a92e-50bf-4782-94a0-60b42fc34a54@192.168.0.31:42227",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291205.08102,
+      "unregistered_time": 1563291331.55938,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0204",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S8",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291205.41092,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291331.50469,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0205",
+      "name": "SA_HPDA_HLRSa5nbgg",
+      "pid": "scheduler-78756c1a-1ae1-492c-961e-f994b9c00162@192.168.0.31:43274",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291222.08015,
+      "unregistered_time": 1563291348.51603,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSa5nbgg 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0205",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S8",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291222.40518,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291348.4088,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.37"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0206",
+      "name": "SA_HPDA_HLRSzptsfn",
+      "pid": "scheduler-42a70805-b817-4786-b649-e97ecb168404@192.168.0.31:46335",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291366.32406,
+      "unregistered_time": 1563291492.67788,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSzptsfn 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0206",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S16",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291366.64149,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291492.63469,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0207",
+      "name": "SA_HPDA_HLRSeq7vpu",
+      "pid": "scheduler-0e901bf2-a0b6-47fb-b29a-780592d75505@192.168.0.31:34164",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291418.3654,
+      "unregistered_time": 1563291544.96287,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSeq7vpu 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0207",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S13",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291418.67178,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291544.88781,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.28"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0208",
+      "name": "SA_HPDA_HLRSzptsfn",
+      "pid": "scheduler-6dac9134-2ebe-4580-9abd-e37d03dfdea2@192.168.0.31:38448",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291555.01815,
+      "unregistered_time": 1563291681.56227,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSzptsfn 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0208",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S4",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291555.35343,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.22"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291681.55296,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.22"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0209",
+      "name": "SA_HPDA_HLRSeq7vpu",
+      "pid": "scheduler-3aa5052f-c249-44d4-9795-cf7b28ce0f49@192.168.0.31:39759",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563291600.11407,
+      "unregistered_time": 1563291726.6162,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSeq7vpu 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0209",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S0",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563291600.43121,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563291726.53428,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0210",
+      "name": "SA_HPDA_HLRSzptsfn",
+      "pid": "scheduler-59ccb543-04af-401d-857e-497160489d53@192.168.0.31:45686",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563292125.0677,
+      "unregistered_time": 1563292251.64005,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSzptsfn 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0210",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S21",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563292125.40365,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.39"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563292251.61136,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.39"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0211",
+      "name": "SA_HPDA_HLRSzptsfn",
+      "pid": "scheduler-c20d6d94-c2fa-4462-9421-f06b98537510@192.168.0.31:35972",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563292364.05739,
+      "unregistered_time": 1563292490.49443,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSzptsfn 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0211",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S19",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563292364.39986,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563292490.40735,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0212",
+      "name": "SA_HPDA_HLRSzptsfn",
+      "pid": "scheduler-0411ed55-c030-4cd0-a432-ff8dc3233a2b@192.168.0.31:38901",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4040",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563292556.85537,
+      "unregistered_time": 1563292683.22631,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRSzptsfn 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0212",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S16",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563292557.18258,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563292683.18372,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0213",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-fc99f28b-50fb-46b7-9fb4-6dd1e35e1f43@192.168.0.31:39474",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563351531.5604,
+      "unregistered_time": 1563351660.52779,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0213",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S10",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563351531.88908,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563351660.49383,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0214",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-2073dbb2-06dc-4b7d-896a-f975c1cb5a89@192.168.0.31:37913",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563351731.20465,
+      "unregistered_time": 1563351857.86788,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0214",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S16",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563351731.53431,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563351857.84437,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0215",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-baec1df0-9294-4e81-9279-f5d2a82a909e@192.168.0.31:46566",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563352222.48578,
+      "unregistered_time": 1563352350.09006,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0215",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S40",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563352222.8266,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.35"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563352350.03632,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.35"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0216",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-2e7a4821-1e8b-4e81-b7d1-cf62454cccd7@192.168.0.31:42466",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4043",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563352337.18988,
+      "unregistered_time": 1563352465.01167,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0216",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S14",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563352337.51817,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563352464.91808,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0217",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-326542b3-9bfb-4b02-8368-af7403f6da67@192.168.0.31:39167",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4042",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563352602.88443,
+      "unregistered_time": 1563352732.24468,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0217",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S0",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563352603.20596,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563352732.22268,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.3"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0218",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-90f5dfb9-3438-4d25-aeb8-3735fb1b97d3@192.168.0.31:46016",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563354837.63382,
+      "unregistered_time": 1563354964.25276,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0218",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S10",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563354837.9423,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563354964.23124,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.46"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0219",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-baaf90cb-2b41-4d3c-9dd6-939de179cd29@192.168.0.31:39574",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563355005.45444,
+      "unregistered_time": 1563355134.05895,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0219",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S14",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563355005.79013,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563355134.00725,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0220",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-36ed7b04-f870-4516-8424-99cfaff13211@192.168.0.31:36314",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563355157.56142,
+      "unregistered_time": 1563355287.79066,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0220",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S12",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563355157.88122,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563355287.69705,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.8"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0221",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-0d940b03-ed92-4900-a236-f771342fffa9@192.168.0.31:37380",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563355940.72343,
+      "unregistered_time": 1563356067.0781,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0221",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S9",
+          "state": "TASK_FINISHED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563355941.0424,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.4"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_FINISHED",
+              "timestamp": 1563356067.05356,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.4"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0222",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-13ec5636-7d82-4306-834a-c242a58c9625@192.168.0.31:34587",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563356406.74645,
+      "unregistered_time": 1563356502.12002,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0222",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S19",
+          "state": "TASK_KILLED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563356407.04724,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.43"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_KILLED",
+              "timestamp": 1563356502.11966
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    },
+    {
+      "id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0223",
+      "name": "SA_HPDA_HLRS849j32",
+      "pid": "scheduler-048bd39d-129d-4988-88a0-6404bb562992@192.168.0.31:35358",
+      "used_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "offered_resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "capabilities": [],
+      "hostname": "192.168.0.31",
+      "webui_url": "http://192.168.0.31:4041",
+      "active": true,
+      "user": "hpcdraja",
+      "failover_timeout": 0,
+      "checkpoint": false,
+      "role": "*",
+      "registered_time": 1563356559.11806,
+      "unregistered_time": 1563356607.36731,
+      "principal": "hpcdraja",
+      "resources": {
+        "disk": 0,
+        "mem": 0,
+        "gpus": 0,
+        "cpus": 0
+      },
+      "tasks": [],
+      "completed_tasks": [
+        {
+          "id": "0",
+          "name": "SA_HPDA_HLRS849j32 0",
+          "framework_id": "a1e7fe28-64f7-4f81-b794-df8963b3b09e-0223",
+          "executor_id": "",
+          "slave_id": "867cb3c2-9e6c-4c89-a856-c0163c1c8a0d-S4",
+          "state": "TASK_KILLED",
+          "resources": {
+            "disk": 0,
+            "mem": 2432,
+            "gpus": 0,
+            "cpus": 11
+          },
+          "statuses": [
+            {
+              "state": "TASK_RUNNING",
+              "timestamp": 1563356559.43394,
+              "container_status": {
+                "network_infos": [
+                  {
+                    "ip_addresses": [
+                      {
+                        "ip_address": "192.168.0.22"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "state": "TASK_KILLED",
+              "timestamp": 1563356607.36709
+            }
+          ],
+          "labels": [],
+          "container": {
+            "type": "MESOS"
+          }
+        }
+      ],
+      "offers": [],
+      "executors": []
+    }
+  ],
+  "unregistered_frameworks": []
+}

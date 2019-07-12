@@ -61,6 +61,8 @@ class SshClient(object):
         # Build a tunnel if necessary
         self._tunnel = None
         self._host = credentials['host']
+        if 'user' in credentials:
+            self._user = credentials['user']
         self._port = int(credentials['port']) if 'port' in credentials else 22
         if 'tunnel' in credentials and credentials['tunnel']:
             self._tunnel = SshForward(credentials)

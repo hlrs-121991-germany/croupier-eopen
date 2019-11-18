@@ -28,7 +28,7 @@ inputs:
   ################### HPDA Infrastructre ##################
   hpda_base_dir:
     description: HPDA working directory
-    default: "/home/users/hpcdraja/SampleApp"
+    default: "Working Directory full path"
 
   hpda_monitoring_period:
     description: HPDA monitoring frequency
@@ -60,7 +60,7 @@ inputs:
     default: "SA_HPDA_HLRS"
 
   job_app_name:
-    default: '/home/users/hpcdraja/SampleApp/target/scala-2.11/simple-project_2.11-1.0.jar'
+    default: 'Full path /home/users/scala-2.11/simple-project_2.11-1.0.jar'
 
   job_executor_cores:
     default: 11

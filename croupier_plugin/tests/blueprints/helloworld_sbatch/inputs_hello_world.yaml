@@ -1,0 +1,20 @@
+hpc_base_dir: "/home/users/dinesh/HelloMpi/mpitutorial-build/tutorials/mpi-hello-world/code"
+hpc_job_prefix: "SA_HPC_DIN"
+hpc_monitoring_period: 5
+hpc_wm_config:
+  country_tz: Europe/Madrid
+  workload_manager: SLURM
+hpc_wm_credentials:
+  host: { get_secret: cluster_eagle }
+  user: { get_secret: username_dinesh }
+  private_key: { get_secret: ssh_key_dinesh }
+hpc_skip_cleanup: True
+hpc_workdir_prefix: "mpi_cfy_din"
+mpi_load_command: module load openmpi/4.0.0_gcc620
+job_num_nodes: 2
+job_num_processes: 4
+job_tasks_per_node: 2
+job_max_time: "00:25:00"
+job_command: "/home/users/dinesh/HelloMpi/mpitutorial-build/tutorials/mpi-hello-world/code/mpi_hello_world.sbatch"
+job_skip_cleanup: True
+

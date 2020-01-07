@@ -1,0 +1,53 @@
+########
+# Copyright (c) 2018 COEGSS - gogolenko@hlrs.de
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#        http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/croupier_plugin/tests/blueprints/inputs_def.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/resources/types/cfy_types.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier/master/plugin.yaml
+
+node_templates:
+    eagle_wm:
+        type: croupier.nodes.WorkloadManager
+        properties:
+            config: { get_input: hpc_wm_config }
+            credentials: { get_input: hpc_wm_credentials }
+            job_prefix: { get_input: hpc_job_prefix }
+            base_dir: { get_input: hpc_base_dir }
+            monitor_period: { get_input: hpc_monitoring_period }
+            skip_cleanup: {get_input: hpc_skip_cleanup}
+            workdir_prefix: {get_input: hpc_workdir_prefix}
+
+    hello_world_job:
+        type: croupier.nodes.Job
+        properties:
+            job_options:
+                type: 'SBATCH'
+                nodes: { get_input: job_num_nodes }
+                tasks: { get_input: job_num_processes }
+                tasks_per_node: { get_input: job_tasks_per_node }
+                max_time: { get_input: job_max_time }
+                command: { get_input: job_command }
+            skip_cleanup: { get_input: job_skip_cleanup }
+        relationships:
+            - type: job_managed_by_wm
+              target: eagle_wm
+
+outputs:
+    hello_world_job_name:
+        description: hello_world_job job name in the HPC
+        value: { get_attribute: [hello_world_job, job_name] }

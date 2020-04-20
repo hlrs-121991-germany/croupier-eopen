@@ -50,7 +50,10 @@ class JobGraphInstance(object):
 
             # Get runtime properties
             runtime_properties = instance._node_instance.runtime_properties
-            self.simulate = runtime_properties["simulate"]
+            if "simulate" in runtime_properties:
+                self.simulate = runtime_properties["simulate"]
+            else:
+                self.simulate = False
             self.host = runtime_properties["credentials"]["host"]
             self.workdir = runtime_properties['workdir']
 

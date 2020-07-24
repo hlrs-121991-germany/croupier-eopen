@@ -33,6 +33,33 @@ imports:
 
 node_templates:
 
+    bash_wm:
+        type: croupier.nodes.WorkloadManager
+        properties:
+            config: { get_input: bash_wm_config }
+            credentials: { get_input: hpda_wm_credentials }
+            job_prefix: { get_input: hpda_job_prefix }
+            base_dir: { get_input: hpda_base_dir }
+            monitor_period: { get_input: hpda_monitoring_period }
+            skip_cleanup: {get_input: hpda_skip_cleanup}
+            workdir_prefix: {get_input: hpda_workdir_prefix}
+
+    deploy_job:
+        type: croupier.nodes.Job
+        properties:
+          #job_options:
+          #    commands: ["ls -al &> ls.out"]
+          deployment:
+            bootstrap: 'scripts/download_input.sh'
+            inputs: 
+                  - { get_secret: eopen_ftp_username }
+                  - { get_secret: eopen_ftp_password }
+                  - { get_input: input_file_location }
+          skip_cleanup: {get_input: job_skip_cleanup}
+        relationships:
+            - type: job_managed_by_wm
+              target: bash_wm
+
     hpda_wm:
         type: croupier.nodes.WorkloadManager
         properties:
@@ -74,6 +101,8 @@ node_templates:
         relationships:
             - type: job_managed_by_wm
               target: hpda_wm
+            - type: job_depends_on
+              target: deploy_job
 
 outputs:
     single_job_name:

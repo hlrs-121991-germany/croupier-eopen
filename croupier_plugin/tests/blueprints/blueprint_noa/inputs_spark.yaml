@@ -3,12 +3,12 @@ bash_wm_config:
   workload_manager: BASH
 hpda_wm_config:
   country_tz: Europe/Madrid
-  workload_manager: SLURM
+  workload_manager: SPARK
 hpda_wm_credentials:
   host: { get_secret: eopen_cluster }
   user: { get_secret: eopen_username }
   private_key: { get_secret: eopen_ssh_key }
-hpda_base_dir: "/home/users/hpcdraja/SampleAppPython/SimpleApp.py"
+hpda_base_dir: "/home/users/hpcdraja/SampleAppPython/"
 hpda_job_prefix: "EOPEN_HPDA_DIN"
 hpda_monitoring_period: 5
 hpda_skip_cleanup: True

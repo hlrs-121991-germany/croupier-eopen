@@ -64,6 +64,10 @@ class Spark(WorkloadManager):
         if (job_settings['type'] != 'SPARK'):
             return {'error': "error in 'type' value"}
 
+        if 'pre' in job_settings:
+            for entry in job_settings['pre']:
+                spark_call += entry + '; '
+
         # Build single line command to submit jobs through spark_submit
         spark_call = "nohup sh spark-submit --name " + str(name) + " "
         spark_call += self._parse_spark_job_settings(name,
@@ -71,7 +75,7 @@ class Spark(WorkloadManager):
                                                      None, None, logger)
         spark_call += " &"
         response = {'call': spark_call}
-        logger.debug("{0}: respons: {1}".format(frameinfo.function, response))
+        logger.debug("{0}: response cmd: {1}".format(frameinfo.function, response))
         return response
 
     def _build_job_cancellation_call(self, name, ssh_client, logger):
@@ -178,6 +182,13 @@ class Spark(WorkloadManager):
         if check_job_settings_key(job_settings, 'application'):
             _settings += _prefix + " " + \
                 str(job_settings['application']) + _suffix
+        else:
+            logger.error("Application jar is mandatory for running spark app")
+
+        if check_job_settings_key(job_settings, 'application_params'):
+            for aps in job_settings['application_params']:
+                _settings += _prefix + " " + \
+                    str(aps) + _suffix
         else:
             logger.error("Application jar is mandatory for running spark app")
 

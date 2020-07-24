@@ -1,12 +1,29 @@
-hpda_base_dir: "/home/users/hpcdraja/SampleApp"
-hpda_job_prefix: "SA_HPDA_DIN"
+bash_wm_config:
+  country_tz: Europe/Madrid
+  workload_manager: BASH
+hpda_wm_config:
+  country_tz: Europe/Madrid
+  workload_manager: SLURM
+hpda_wm_credentials:
+  host: { get_secret: eopen_cluster }
+  user: { get_secret: eopen_username }
+  private_key: { get_secret: eopen_ssh_key }
+hpda_base_dir: "/home/users/hpcdraja/SampleAppPython/SimpleApp.py"
+hpda_job_prefix: "EOPEN_HPDA_DIN"
 hpda_monitoring_period: 5
 hpda_skip_cleanup: True
-hpda_workdir_prefix: "spark_cfy_din"
-job_app_name: '/home/users/hpcdraja/SampleApp/target/scala-2.11/simple-project_2.11-1.0.jar'
+hpda_workdir_prefix: "spark_cfy_eopen"
+job_app_full_path: '/home/users/hpcdraja/SampleAppPython/SimpleApp.py'
 job_executor_cores: 21
 job_executor_memory: '10G'
 job_driver_cores: 5
 job_driver_memory: '5G'
-job_class_name: "SimpleApp"
 job_skip_cleanup: True
+input_file_location: "/home/hpcdraja/EOPEN-Test/input-eopen.txt"
+output_file_location: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output/test-output.txt"
+app_ip_rf_depth: "5"
+app_ip_rf_trees: "6"
+app_ip_training_ratio: "7"
+app_ip_rf_bins: "8"
+app_ip_start_month: "9"
+app_ip_end_month: "11"

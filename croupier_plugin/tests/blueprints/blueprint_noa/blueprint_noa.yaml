@@ -29,15 +29,15 @@ tosca_definitions_version: cloudify_dsl_1_3
 imports:
     - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/resources/types/cfy_types.yaml
     - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/plugin.yaml
-    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/croupier_plugin/tests/blueprints/blueprint_spark/inputs_def_spark.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/croupier_plugin/tests/blueprints/blueprint_noa/inputs_def_spark.yaml
 
 node_templates:
 
     bash_wm:
         type: croupier.nodes.WorkloadManager
         properties:
-            config: { get_secret: bash_wm_config }
-            credentials: { get_secret: hpda_wm_credentials }
+            config: { get_input: bash_wm_config }
+            credentials: { get_input: hpda_wm_credentials }
             job_prefix: { get_input: hpda_job_prefix }
             base_dir: { get_input: hpda_base_dir }
             monitor_period: { get_input: hpda_monitoring_period }
@@ -49,11 +49,11 @@ node_templates:
         properties:
           deployment:
             job_options:
-              commands: ["ls -al"]
+              commands: ["ls -al &> ls.out"]
             bootstrap: 'scripts/download_input.sh'
             inputs: 
-                  - { get_secret: ftp_username }
-                  - { get_secret: ftp_password }
+                  - { get_secret: eopen_ftp_username }
+                  - { get_secret: eopen_ftp_password }
                   - { get_input: input_file_location }
             skip_cleanup: {get_input: job_skip_cleanup}
         relationships:
@@ -90,12 +90,12 @@ node_templates:
                 executor_memory: {get_input: job_executor_memory }
                 driver_cores: {get_input: job_driver_cores }
                 driver_memory: {get_input: job_driver_memory }
-                class_name: {get_input: job_class_name }
+                # class_name: {get_input: job_class_name }
             deployment:
                 revert: 'scripts/upload_output.sh'
                 inputs: 
-                  - { get_secret: ftp_username }
-                  - { get_secret: ftp_password }
+                  - { get_secret: eopen_ftp_username }
+                  - { get_secret: eopen_ftp_password }
                   - { get_input: output_file_location }
             skip_cleanup: {get_input: job_skip_cleanup}
         relationships:

@@ -65,7 +65,7 @@ inputs:
   hpda_job_prefix:
     default: "SA_HPDA_HLRS"
 
-  job_app_name:
+  job_app_full_path:
     default: '/home/users/hpcdraja/SampleApp/target/scala-2.11/simple-project_2.11-1.0.jar'
 
   job_executor_cores:
@@ -85,3 +85,28 @@ inputs:
 
   job_skip_cleanup:
     default: True
+
+  input_file_location: 
+    default: "/home/hpcdraja/EOPEN-Test/input-eopen.txt"
+
+  output_file_location:
+    default: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output/test-output.txt"
+    
+  app_ip_rf_depth:
+    default: "5"
+
+  app_ip_rf_trees:
+    default: "6"
+
+  app_ip_training_ratio:
+    default: "7"
+
+  app_ip_rf_bins: 
+    default: "8"
+
+  app_ip_start_month: 
+    default: "9"
+
+  app_ip_end_month: 
+    default: "11"
+

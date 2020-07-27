@@ -52,7 +52,6 @@ class Spark(WorkloadManager):
         logger.debug("{2}: {0} - {1}".format(frameinfo.filename,
                                              frameinfo.lineno,
                                              frameinfo.function))
-        logger.debug("Job_settings: {0}".format(job_settings))
         if not isinstance(job_settings, dict) or \
                 not isinstance(name, basestring):
             return {'error': "Incorrect inputs"}
@@ -61,26 +60,30 @@ class Spark(WorkloadManager):
             return {'error': "'type' and 'application' " +
                     "must be defined in job settings"}
 
-        if (job_settings['type'] != 'SPARK'):
-            return {'error': "error in 'type' value"}
-
         spark_call = ""
         logger.debug("pre job is started")
         if 'pre' in job_settings:
             for entry in job_settings['pre']:
                 spark_call += entry + '; '
 
+        if (job_settings['type'] == 'SPARK'):
         # Build single line command to submit jobs through spark_submit
-        spark_call += "spark-submit --name " + str(name) + " "
-        spark_call += self._parse_spark_job_settings(name,
-                                                     job_settings,
-                                                     None, None, logger)
-        spark_call += "; "
+            spark_call += "spark-submit --name " + str(name) + " "
+            spark_call += self._parse_spark_job_settings(name,
+                                                         job_settings,
+                                                         None, None, logger)
+            spark_call += "; "
+        elif (job_settings['type'] != 'BASH'):
+            spark_call += self._parse_bash_job_settings(name, job_settings,
+                                                         None, None, logger)
+            spark_call += "; "
+        else:
+            return {'error': "error in 'type' value"}
         logger.debug("post job is started")
         if 'post' in job_settings:
             for entry in job_settings['post']:
                 spark_call += entry + '; '
-        spark_call =  "nohup sh  -c " + spark_call + "&"
+        spark_call =  "nohup sh  -c ' " + spark_call + " ' &"
         response = {'call': spark_call}
         logger.info("{0}: response cmd: {1}".format(frameinfo.function, response))
         return response
@@ -136,6 +139,39 @@ class Spark(WorkloadManager):
                                                         spark_cancel_call,
                                                         user))
         return spark_cancel_call
+
+    def _parse_bash_job_settings(self, job_id, job_settings, prefix, suffix,
+                                  logger):
+        frameinfo = getframeinfo(currentframe())
+        logger.debug("{2}: {0} - {1}".format(frameinfo.filename,
+                                             frameinfo.lineno,
+                                             frameinfo.function))
+        _prefix = prefix if prefix else ''
+        _suffix = suffix if suffix else ''
+        _settings = ''
+
+        # Check if exists and has content
+        def check_job_settings_key(job_settings, key):
+            return key in job_settings and str(job_settings[key]).strip()
+
+        # Bash settings
+        if check_job_settings_key(job_settings, 'application'):
+            _settings += _prefix + " " + \
+                str(job_settings['application']) + _suffix
+        else:
+            logger.error("Application jar is mandatory for running spark app")
+
+        if check_job_settings_key(job_settings, 'application_params'):
+            for params in job_settings['application_params']:
+                _settings += _prefix + " " + \
+                    str(params) + _suffix
+        else:
+            logger.error("Application jar is mandatory for running spark app")
+
+        if job_id:
+            _settings += _prefix + " &> ./" + str(job_id) + ".out" + _suffix
+        return _settings
+
 
     def _parse_spark_job_settings(self, job_id, job_settings, prefix, suffix,
                                   logger):

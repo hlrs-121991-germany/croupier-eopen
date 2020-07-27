@@ -1,0 +1,85 @@
+########
+# Copyright (c) 2019 HLRS. All rights reserved.
+#
+# This file is part of Croupier.
+#
+# Croupier is free software: you can redistribute it and/or modify it
+# under the terms of the Apache License, Version 2.0 (the License) License.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT, IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
+# OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+# See README file for full disclaimer information and LICENSE file for full
+# license information in the project root.
+#
+# @author: Dineshkumar RAJAGOPAL
+#          HLRS.
+#          e-mail: hpcdraja@hlrs.de
+#
+# blueprint_spark.yaml
+
+
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/resources/types/cfy_types.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/plugin.yaml
+    - https://raw.githubusercontent.com/hlrs-121991-germany/croupier-eopen/master/croupier_plugin/tests/blueprints/blueprint_noa/inputs_def_spark.yaml
+
+node_templates:
+
+    hpda_wm:
+        type: croupier.nodes.WorkloadManager
+        properties:
+            config: { get_input: hpda_wm_config }
+            credentials: { get_input: hpda_wm_credentials }
+            job_prefix: { get_input: hpda_job_prefix }
+            base_dir: { get_input: hpda_base_dir }
+            monitor_period: { get_input: hpda_monitoring_period }
+            skip_cleanup: {get_input: hpda_skip_cleanup}
+            workdir_prefix: {get_input: hpda_workdir_prefix}
+
+    run_job:
+        type: croupier.nodes.Job
+        properties:
+            job_options:
+                type: 'SPARK'
+                pre:
+                  - 'module load tools/proxy'
+                application: {get_input: job_app_full_path}
+                application_params:
+                  - {get_input: app_ip_rf_depth}
+                  - {get_input: app_ip_rf_trees}
+                  - {get_input: app_ip_training_ratio}
+                  - {get_input: app_ip_rf_bins}
+                  - {get_input: app_ip_start_month}
+                  - {get_input: app_ip_end_month}
+                total_executor_cores: {get_input: job_executor_cores }
+                executor_memory: {get_input: job_executor_memory }
+                driver_cores: {get_input: job_driver_cores }
+                driver_memory: {get_input: job_driver_memory }
+                # class_name: {get_input: job_class_name }
+                post:
+                  - 'module unload tools/proxy'
+            deployment:
+              bootstrap: 'scripts/download_input.sh'
+              revert: 'scripts/upload_output.sh'
+              inputs:
+                - { get_secret: eopen_ftp_username }
+                - { get_secret: eopen_ftp_password }
+                - { get_input: input_file_location }
+                - { get_input: output_file_location }
+            skip_cleanup: {get_input: job_skip_cleanup}
+        relationships:
+            - type: job_managed_by_wm
+              target: hpda_wm
+
+outputs:
+    single_job_name:
+        description: single job name in the HPDA
+        value: { get_attribute: [run_job, job_name] }

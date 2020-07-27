@@ -19,8 +19,10 @@ job_executor_memory: '10G'
 job_driver_cores: 5
 job_driver_memory: '5G'
 job_skip_cleanup: True
-input_file_location: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output"
-output_file_location: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output/test-output.txt"
+#input_file_location: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output"
+input_file_location: "."
+#output_file_location: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output/test-output.txt"
+output_file_location: "./ftp_download_input_password.txt"
 app_ip_rf_depth: "5"
 app_ip_rf_trees: "6"
 app_ip_training_ratio: "7"

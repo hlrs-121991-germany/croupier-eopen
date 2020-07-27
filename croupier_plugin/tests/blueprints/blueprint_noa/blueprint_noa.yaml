@@ -64,12 +64,8 @@ node_templates:
                 driver_cores: {get_input: job_driver_cores }
                 driver_memory: {get_input: job_driver_memory }
                 # class_name: {get_input: job_class_name }
-            deployment:
-                revert: 'scripts/upload_output.sh'
-                inputs: 
-                  - { get_secret: eopen_ftp_username }
-                  - { get_secret: eopen_ftp_password }
-                  - { get_input: output_file_location }
+                post:
+                  - 'module unload tools/proxy'
             skip_cleanup: {get_input: job_skip_cleanup}
         relationships:
             - type: job_managed_by_wm

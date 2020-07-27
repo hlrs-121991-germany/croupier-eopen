@@ -207,7 +207,6 @@ class Spark(WorkloadManager):
     def get_states(self, workdir, credentials, job_names, logger):
         states = {}
         frameinfo = getframeinfo(currentframe())
-        time.sleep(5)
         logger.debug("{2}: {0} - {1}".format(frameinfo.filename,
                                              frameinfo.lineno,
                                              frameinfo.function))

@@ -10,7 +10,7 @@ hpda_wm_credentials:
   private_key: { get_secret: eopen_ssh_key }
 hpda_base_dir: "/home/users/hpcdraja/SampleAppPython/"
 hpda_job_prefix: "EOPEN_HPDA_DIN"
-hpda_monitoring_period: 5
+hpda_monitoring_period: 30
 hpda_skip_cleanup: True
 hpda_workdir_prefix: "spark_cfy_eopen"
 job_app_full_path: '/home/users/hpcdraja/SampleAppPython/SimpleApp.py'

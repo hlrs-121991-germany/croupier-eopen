@@ -48,11 +48,11 @@ class Spark(WorkloadManager):
         return None
 
     def _build_job_submission_call(self, name, job_settings, logger):
-        # check input information correctness
         frameinfo = getframeinfo(currentframe())
         logger.debug("{2}: {0} - {1}".format(frameinfo.filename,
                                              frameinfo.lineno,
                                              frameinfo.function))
+        logger.debug("Job_settings: {0}".format(job_settings))
         if not isinstance(job_settings, dict) or \
                 not isinstance(name, basestring):
             return {'error': "Incorrect inputs"}
@@ -64,20 +64,23 @@ class Spark(WorkloadManager):
         if (job_settings['type'] != 'SPARK'):
             return {'error': "error in 'type' value"}
 
+        spark_call = ""
+        logger.debug("pre job is started")
         if 'pre' in job_settings:
             for entry in job_settings['pre']:
                 spark_call += entry + '; '
 
         # Build single line command to submit jobs through spark_submit
-        spark_call = "spark-submit --name " + str(name) + " "
+        spark_call += "spark-submit --name " + str(name) + " "
         spark_call += self._parse_spark_job_settings(name,
                                                      job_settings,
                                                      None, None, logger)
         spark_call += "; "
+        logger.debug("post job is started")
         if 'post' in job_settings:
             for entry in job_settings['post']:
                 spark_call += entry + '; '
-        spark_call +=  "nohup sh  -c " + spark_call + "&"
+        spark_call =  "nohup sh  -c " + spark_call + "&"
         response = {'call': spark_call}
         logger.info("{0}: response cmd: {1}".format(frameinfo.function, response))
         return response
@@ -204,6 +207,7 @@ class Spark(WorkloadManager):
     def get_states(self, workdir, credentials, job_names, logger):
         states = {}
         frameinfo = getframeinfo(currentframe())
+        time.sleep(5)
         logger.debug("{2}: {0} - {1}".format(frameinfo.filename,
                                              frameinfo.lineno,
                                              frameinfo.function))

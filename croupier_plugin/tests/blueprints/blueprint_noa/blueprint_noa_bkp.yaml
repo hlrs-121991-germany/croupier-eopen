@@ -44,11 +44,12 @@ node_templates:
             skip_cleanup: {get_input: hpda_skip_cleanup}
             workdir_prefix: {get_input: hpda_workdir_prefix}
 
-    deploy_job:
+    download_input:
         type: croupier.nodes.Job
         properties:
-          #job_options:
-          #    commands: ["ls -al &> ls.out"]
+          job_options:
+              command: "ls -al"
+              type: "SHELL"
           deployment:
             bootstrap: 'scripts/download_input.sh'
             inputs: 
@@ -91,18 +92,37 @@ node_templates:
                 driver_cores: {get_input: job_driver_cores }
                 driver_memory: {get_input: job_driver_memory }
                 # class_name: {get_input: job_class_name }
-            deployment:
-                revert: 'scripts/upload_output.sh'
-                inputs: 
-                  - { get_secret: eopen_ftp_username }
-                  - { get_secret: eopen_ftp_password }
-                  - { get_input: output_file_location }
+                #deployment:
+                #revert: 'scripts/upload_output.sh'
+                #inputs: 
+                #  - { get_secret: eopen_ftp_username }
+                #  - { get_secret: eopen_ftp_password }
+                #  - { get_input: output_file_location }
             skip_cleanup: {get_input: job_skip_cleanup}
         relationships:
             - type: job_managed_by_wm
               target: hpda_wm
             - type: job_depends_on
-              target: deploy_job
+              target: download_input
+
+    upload_output:
+        type: croupier.nodes.Job
+        properties:
+          job_options:
+              command: "ls -al"
+              type: "SHELL"
+          deployment:
+            bootstrap: 'scripts/upload_output.sh'
+            inputs: 
+                  - { get_secret: eopen_ftp_username }
+                  - { get_secret: eopen_ftp_password }
+                  - { get_input: output_file_location }
+          skip_cleanup: {get_input: job_skip_cleanup}
+        relationships:
+            - type: job_managed_by_wm
+              target: bash_wm
+            - type: job_depends_on
+              target: run_job
 
 outputs:
     single_job_name:

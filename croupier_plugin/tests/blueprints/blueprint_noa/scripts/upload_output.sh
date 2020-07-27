@@ -8,4 +8,4 @@ echo $ftp_username
 echo $ftp_password
 
 
-scp $file_location test-eopen:~/upload_folder/
+scp $file_location test-eopen:~/EOPEN-Test/

@@ -86,10 +86,10 @@ inputs:
   job_skip_cleanup:
     default: True
 
-  input_file_location: 
+  ftp_file_upload_location:
     default: "/home/hpcdraja/EOPEN-Test/input-eopen.txt"
 
-  output_file_location:
+  ftp_file_download_location:
     default: "/home/users/hpcdraja/SampleAppPython/EOPEN-Output/test-output.txt"
     
   app_ip_rf_depth:

@@ -73,7 +73,7 @@ class Spark(WorkloadManager):
                                                          job_settings,
                                                          None, None, logger)
             spark_call += "; "
-        elif (job_settings['type'] != 'MBASH'):
+        elif (job_settings['type'] == 'MBASH'):
             spark_call += "/home/users/hpcdraja/IntegrationOfEOPEN/Mesos/Mbash/mbash " + str(name) + " "
             spark_call += self._parse_bash_job_settings(name, job_settings,
                                                          None, None, logger)

@@ -73,7 +73,8 @@ class Spark(WorkloadManager):
                                                          job_settings,
                                                          None, None, logger)
             spark_call += "; "
-        elif (job_settings['type'] != 'BASH'):
+        elif (job_settings['type'] != 'MBASH'):
+            spark_call += "/home/users/hpcdraja/IntegrationOfEOPEN/Mesos/Mbash/mbash " + str(name) + " "
             spark_call += self._parse_bash_job_settings(name, job_settings,
                                                          None, None, logger)
             spark_call += "; "
@@ -159,14 +160,14 @@ class Spark(WorkloadManager):
             _settings += _prefix + " " + \
                 str(job_settings['application']) + _suffix
         else:
-            logger.error("Application jar is mandatory for running spark app")
+            logger.error("Application Script file is a mandatory parameter in Mbash (Single-node) command")
 
         if check_job_settings_key(job_settings, 'application_params'):
             for params in job_settings['application_params']:
                 _settings += _prefix + " " + \
                     str(params) + _suffix
         else:
-            logger.error("Application jar is mandatory for running spark app")
+            logger.error("Application Parameter is an optional parameter in Mbash (Single-node) command")
 
         if job_id:
             _settings += _prefix + " &> ./" + str(job_id) + ".out" + _suffix
@@ -233,7 +234,7 @@ class Spark(WorkloadManager):
                 _settings += _prefix + " " + \
                     str(params) + _suffix
         else:
-            logger.error("Application jar is mandatory for running spark app")
+            logger.error("Application Parameter is an optional parameter in Spark Mesos app")
 
         if job_id:
             _settings += _prefix + " &> ./" + str(job_id) + ".out" + _suffix
